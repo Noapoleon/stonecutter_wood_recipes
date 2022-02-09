@@ -1,7 +1,7 @@
 name: StonecutterWoodRecipes
-version: '1.0'
+version: 'v1.1'
 main: me.noapoleon.stonecutterwoodrecipes.StonecutterWoodRecipes
 api-version: 1.18
 authors: [ Noapoleon ]
-description: Plugin that adds wood recipes to the stonecutter block. Couldn't make a "Woodcutter" block as this requires a MOD not a PLUGIN.
+description: Plugin that adds wood recipes to the stonecutter block. Couldn't make a "Woodmill" block as this requires a MOD not a PLUGIN.
 website: https://www.youtube.com/channel/UCQ5uI2nPlZ35dgh21queN_w
