@@ -1,5 +1,5 @@
 name: StonecutterWoodRecipes
-version: 'v1.1'
+version: '1.1.1'
 main: me.noapoleon.stonecutterwoodrecipes.StonecutterWoodRecipes
 api-version: 1.18
 authors: [ Noapoleon ]

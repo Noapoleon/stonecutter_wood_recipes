@@ -78,6 +78,7 @@ public class RecipesSortingLogic
 		return isStripped ? woodType.substring(firstUnderscore + 1, lastUnderscore) : woodType.substring(0, lastUnderscore);
 	}
 
+	// CHANGE HERE TO ADD RECIPE RESULTS
 	void fillSourceMaterialsResults(EnumMap<Material, ArrayList<String>> recipesMap, Material material, String logSuffix, String woodSuffix)
 	{
 		String woodType = getWoodType(material);
@@ -89,25 +90,15 @@ public class RecipesSortingLogic
 
 		ArrayList<String> resultsList = new ArrayList<String>(){};
 
-		int slabAmount = 0;
-		if (matName.contains("_PLANKS"))
-			slabAmount = 2;
-		else if (isLog || isWood)
-			slabAmount = 8;
-		else
-			System.out.println("Couldn't add slabAmount for material \"" + matName + "\"");
+		int slabAmount = matName.contains("_PLANKS") ? 2 : 8;
+		int stairAmount = matName.contains("_PLANKS") ? 2 : 8;
+		int stickAmount = matName.contains("_PLANKS") ? 2 : 8;
 
-		int stairAmount = 0;
-		if (matName.contains("_PLANKS"))
-			stairAmount = 1;
-		else if (isLog || isWood)
-			stairAmount = 4;
-		else
-			System.out.println("Couldn't add stairAmount for material \"" + matName + "\"");
 
 		// COMMON RESULTS FOR EVERY RECIPE AND PLANKS
 		resultsList.add(woodType + "_SLAB#" + slabAmount);
 		resultsList.add(woodType + "_STAIRS#" + stairAmount);
+		resultsList.add("STICK#" + stickAmount);
 
 		// COMMON RESULTS FOR LOGS AND WOOD TYPES
 		if (isLog || isWood)
